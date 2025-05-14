@@ -36,7 +36,9 @@ classes: wide wiki-page
       </aside>
     {% endif %}
     
-    {{ content }}
+    <div class="wiki-content-body">
+      {{ content }}
+    </div>
     
     <div class="wiki-footer">
       <p>Last updated: {{ page.last_modified_at | default: page.date | date: "%B %d, %Y" }}</p>

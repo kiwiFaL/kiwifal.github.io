@@ -1,8 +1,10 @@
 ---
 title: "MC/DC Coverage"
 excerpt: "Modified Condition/Decision Coverage requirements and implementation in DO-178C"
+layout: wiki
 toc: true
 tags: [verification, coverage, testing, level-a]
+last_modified_at: 2025-05-14
 ---
 
 # Modified Condition/Decision Coverage (MC/DC)

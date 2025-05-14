@@ -1,0 +1,28 @@
+# Wiki navigation structure
+main:
+  - title: "DO-178C Basics"
+    children:
+      - title: "Software Levels"
+        url: /wiki/software-levels/
+      - title: "Verification Methods"
+        url: /wiki/verification-methods/
+      - title: "Structural Coverage"
+        url: /wiki/structural-coverage/
+  
+  - title: "Testing & Verification"
+    children:
+      - title: "MC/DC Coverage"
+        url: /wiki/mc-dc-coverage/
+      - title: "Tool Qualification"
+        url: /wiki/tool-qualification/
+      - title: "Requirements Traceability"
+        url: /wiki/requirements-traceability/
+  
+  - title: "Development Process"
+    children:
+      - title: "Planning Process"
+        url: /wiki/planning-process/
+      - title: "Configuration Management"
+        url: /wiki/configuration-management/
+      - title: "Quality Assurance"
+        url: /wiki/quality-assurance/

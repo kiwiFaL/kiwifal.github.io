@@ -165,6 +165,7 @@ footer:
 include:
   - .htaccess
   - _pages
+  - _wiki
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -324,6 +325,20 @@ defaults:
       comments: # true
       share: true
       related: true
+  
+  # _wiki
+  - scope:
+      path: ""
+      type: wiki
+    values:
+      layout: wiki
+      author_profile: false
+      read_time: false
+      comments: false
+      share: true
+      related: true
+      sidebar:
+        nav: "wiki-navigation"
 
 # Collections for Wiki functionality
 collections:

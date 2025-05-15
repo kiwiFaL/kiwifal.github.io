@@ -21,10 +21,10 @@ The site includes:
 - **Blog**: Regular articles on best practices, case studies, and industry updates
 - **Resources**: Templates, checklists, and tools to assist with certification activities
 
-## Contributors
+## About the Author
 
-This site is maintained by a team of aviation software certification experts with decades of combined experience in developing and certifying safety-critical software for various aircraft systems.
+This site is maintained by Paul Wright (CEng, MSc, GradDipTech, BBS, DAEM, MEIT), based in Kerikeri, New Zealand. With extensive experience in aviation software development and certification, Paul created this resource to share knowledge about DO-178C development assurance processes.
 
 ## Contact
 
-For questions, suggestions, or contributions, please reach out to us at [contact@example.com](mailto:contact@example.com).
+For questions, suggestions, or contributions, please feel free to reach out.

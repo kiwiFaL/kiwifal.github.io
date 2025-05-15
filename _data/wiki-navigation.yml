@@ -2,6 +2,8 @@
 main:
   - title: "DO-178C Basics"
     children:
+      - title: "Development Assurance Overview"
+        url: /wiki/Development-assurance-overview/
       - title: "Software Levels"
         url: /wiki/software-levels/
       - title: "Verification Methods"

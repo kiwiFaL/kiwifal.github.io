@@ -4,6 +4,8 @@ main:
     children:
       - title: "Development Assurance Overview"
         url: /wiki/Development-assurance-overview/
+      - title: "How DALs Are Determined and Allocated"
+        url: /wiki/How_Are_DALs_Determined_and_Allocated/
       - title: "Software Levels"
         url: /wiki/software-levels/
       - title: "Verification Methods"

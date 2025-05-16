@@ -63,11 +63,9 @@ Key objectives of AC 20-193 include:
 
 The simplest approach to avoid the complexities of AC 20-193 compliance is to disable all but one core in a multi-core processor. This strategy effectively turns a multi-core processor into a single-core processor, eliminating the need to address interference channels, resource contention, and other multi-core specific challenges.
 
-However, this approach faces two significant practical challenges:
+However, this approach has limitations, you are effectively turning your computer into a single cylinder vehicle. With more and more data needing to processed to bring more functionaility, safety and autonomy to aviation, single core perofomace is at its maxmimum and indiviual cores are not getting faster, performance increases come from more cores and multi-core applications. There is even more need for multi-core as aerospace embrasses Machine Learning.  
 
-1. **Performance limitations**: By using only one core, systems cannot leverage the performance benefits of parallel processing, potentially limiting the capabilities of modern avionics systems.
-
-2. **Hardware availability**: Perhaps more critically, it's becoming increasingly difficult to find single-core processors in the market. Semiconductor manufacturers have largely shifted their production to multi-core architectures, even for embedded systems. This market reality means that avionics developers must either:
+This market reality means avionics developers must either:
    - Use older, potentially obsolete single-core processors with limited performance and support
    - Use modern multi-core processors with all but one core disabled, wasting potential computing resources
    - Embrace multi-core processing and address the certification challenges of AC 20-193
@@ -168,4 +166,4 @@ Multi-core processing offers significant performance benefits for aviation syste
 
 By understanding the risks, compliance requirements, and technical challenges associated with multi-core processing, developers can successfully navigate the certification process while leveraging the benefits of modern processor architectures. The key is finding the right balance between performance gains and deterministic behavior, ensuring that safety remains the paramount concern in all design decisions.
 
-As aviation systems continue to evolve, multi-core processing will play an increasingly important role, making compliance with AC 20-193 an essential skill for avionics developers and certification specialists.
+As aviation systems continue to evolve, including embrassing Machine Learning and AI, multi-core processing will play an increasingly important role, making compliance with AC 20-193 an essential skill for avionics developers and certification specialists.

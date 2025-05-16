@@ -6,5 +6,7 @@ main:
     url: /wiki/
   - title: "Blog"
     url: /posts/
+  - title: "DO-178C Posts"
+    url: /categories/do-178c/
   - title: "About"
     url: /about/

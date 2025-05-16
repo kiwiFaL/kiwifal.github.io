@@ -30,3 +30,12 @@ main:
         url: /wiki/configuration-management/
       - title: "Quality Assurance"
         url: /wiki/quality-assurance/
+        
+  - title: "Related Blog Posts"
+    children:
+      - title: "Mastering MC/DC Coverage"
+        url: /do-178c/mastering-mc-dc-coverage/
+      - title: "Understanding Development Assurance"
+        url: /do-178c/understanding-development-assurance/
+      - title: "How DALs Are Determined"
+        url: /do-178c/how-dals-are-determined-and-allocated/

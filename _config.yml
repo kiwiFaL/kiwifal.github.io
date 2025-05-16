@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "DO-178C Development Assurance"
+title                    : "DO-178C Body of Knowledge"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Paul Wright"
@@ -27,11 +27,11 @@ baseurl                  : ""
 repository               : "kiwifal/kiwifal.github.io"
 teaser                   : "/assets/images/teaser.jpg"
 logo                     : "/assets/images/logo.png"
-masthead_title           : "DO-178C Resources"
+masthead_title           : "DO-178C Body of Knowledge"
 breadcrumbs              : true
 words_per_minute         : 200
 enable_copy_code_button  : true
-copyright                : "DO-178C Development Assurance"
+copyright                : "DO-178C Body of Knowledge"
 copyright_url            : "https://kiwifal.github.io"
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"

@@ -5,7 +5,7 @@ layout: single
 author_profile: true
 ---
 
-# About DO-178C Resources
+# About DO-178C Body of Knowledge
 
 This site provides comprehensive resources, guides, and best practices for aviation software certification under DO-178C standards.
 
@@ -23,7 +23,7 @@ The site includes:
 
 ## About the Author
 
-This site is maintained by Paul Wright (CEng, MSc, GradDipTech, BBS, DAEM, MEIT), based in Kerikeri, New Zealand. With extensive experience in aviation software development and certification, Paul created this resource to share knowledge about DO-178C development assurance processes.
+This site is maintained by Paul Wright (CEng, MSc, GradDipTech, BBS, DAEM, MEIT), based in Kerikeri, New Zealand. With extensive experience in aviation software development and certification, Paul created this resource to share knowledge about DO-178C certification processes.
 
 ## Contact
 

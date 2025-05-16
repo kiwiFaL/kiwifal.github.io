@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Generator Guide</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .step {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .step h3 {
+            margin-top: 0;
+        }
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Roboto Mono', monospace;
+        }
+        .file-list {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 14px;
+        }
+        .note {
+            background-color: #e7f3fe;
+            border-left: 4px solid #2196F3;
+            padding: 10px 15px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Favicon Generator Guide</h1>
+    <p>This guide will help you create new favicons for your website based on your updated logo.</p>
+
+    <div class="step">
+        <h3>Step 1: Use an Online Favicon Generator</h3>
+        <p>Since we don't have ImageMagick installed, you can use one of these online favicon generators:</p>
+        <ul>
+            <li><a href="https://realfavicongenerator.net/" target="_blank">Real Favicon Generator</a> (Recommended)</li>
+            <li><a href="https://favicon.io/" target="_blank">Favicon.io</a></li>
+            <li><a href="https://www.favicon-generator.org/" target="_blank">Favicon & App Icon Generator</a></li>
+        </ul>
+        <p>Upload your logo file (<code>assets/images/logo.png</code>) to one of these services.</p>
+    </div>
+
+    <div class="step">
+        <h3>Step 2: Configure Your Favicon Settings</h3>
+        <p>When using Real Favicon Generator (recommended):</p>
+        <ol>
+            <li>Upload your <code>logo.png</code> file</li>
+            <li>Adjust settings for each platform (iOS, Android, Windows, etc.)</li>
+            <li>For the SVG favicon (Safari pinned tab), choose an appropriate silhouette color</li>
+            <li>Generate your favicon package</li>
+            <li>Download the generated package</li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h3>Step 3: Replace Existing Favicon Files</h3>
+        <p>Extract the downloaded package and replace the following files in your <code>assets/images/</code> directory:</p>
+        <div class="file-list">
+            - favicon-16x16.png
+            - favicon-32x32.png
+            - apple-touch-icon.png
+            - android-chrome-192x192.png
+            - android-chrome-512x512.png
+            - safari-pinned-tab.svg
+            - site.webmanifest (if provided)
+        </div>
+        
+        <div class="note">
+            <p><strong>Note:</strong> If the generator provides a different set of files or different naming convention, you may need to update the references in <code>_includes/head/custom.html</code>.</p>
+        </div>
+    </div>
+
+    <div class="step">
+        <h3>Step 4: Update site.webmanifest (if needed)</h3>
+        <p>If the generator provides a new <code>site.webmanifest</code> file, make sure to update it with your site's information:</p>
+        <pre><code>{
+    "name": "DO-178C Development Assurance",
+    "short_name": "DO-178C",
+    "icons": [
+        {
+            "src": "/assets/images/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/images/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}</code></pre>
+    </div>
+
+    <div class="step">
+        <h3>Step 5: Test Your New Favicons</h3>
+        <p>After replacing the files:</p>
+        <ol>
+            <li>Run your Jekyll site locally or deploy it</li>
+            <li>Clear your browser cache</li>
+            <li>Visit your site and verify the new favicons appear correctly</li>
+            <li>Test on different browsers and devices if possible</li>
+        </ol>
+    </div>
+
+    <div class="note">
+        <p><strong>Pro Tip:</strong> For the best results, start with a high-quality, simple logo that works well at small sizes. Avoid complex details that won't be visible at favicon sizes.</p>
+    </div>
+</body>
+</html>

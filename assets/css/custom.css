@@ -1,0 +1,6 @@
+/* Custom CSS to override theme defaults */
+
+/* Make profile picture rectangular instead of oval */
+.author__avatar img {
+  border-radius: 4px !important; /* Small rounded corners instead of circle */
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Favicon Creator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .instructions {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Favicon Creator</h1>
+    
+    <div class="controls">
+        <button id="createFavicon">Create Favicon</button>
+        <button id="downloadFavicon">Download Favicon</button>
+    </div>
+    
+    <canvas id="faviconCanvas" width="64" height="64"></canvas>
+    
+    <div class="instructions">
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Click "Create Favicon" to generate a simple DO-178C favicon</li>
+            <li>Click "Download Favicon" to download the favicon.ico file</li>
+            <li>Place the downloaded favicon.ico file in your site's root directory</li>
+            <li>Add the following line to your <code>_includes/head/custom.html</code> file, right after the other favicon links:
+                <pre>&lt;link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}"&gt;</pre>
+            </li>
+            <li>For a more complete favicon solution, follow the instructions in the favicon-README.md file</li>
+        </ol>
+    </div>
+    
+    <script>
+        const canvas = document.getElementById('faviconCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        function createFavicon() {
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Background
+            ctx.fillStyle = '#2c3e50';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Text
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 14px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('DO', canvas.width/2, canvas.height/2 - 7);
+            ctx.fillText('178C', canvas.width/2, canvas.height/2 + 7);
+        }
+        
+        function downloadFavicon() {
+            // Create a temporary link
+            const link = document.createElement('a');
+            
+            // Convert canvas to blob
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                link.href = url;
+                link.download = 'favicon.ico';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+            });
+        }
+        
+        // Event listeners
+        document.getElementById('createFavicon').addEventListener('click', createFavicon);
+        document.getElementById('downloadFavicon').addEventListener('click', downloadFavicon);
+        
+        // Create favicon on page load
+        createFavicon();
+    </script>
+</body>
+</html>

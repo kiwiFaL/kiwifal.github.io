@@ -14,10 +14,13 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
+<div id="main" role="main" style="max-width: 100%; width: 100%; padding-left: 1em; padding-right: 1em;">
+  {% comment %}
+  <!-- Sidebar removed for full width layout -->
   {% include sidebar.html %}
+  {% endcomment %}
 
-  <div class="archive">
+  <div class="archive" style="width: 100%; max-width: 100%; padding-right: 0; float: none;">
     {% unless page.header.overlay_color or page.header.overlay_image %}
       <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
     {% endunless %}

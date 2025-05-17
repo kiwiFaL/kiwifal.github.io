@@ -40,46 +40,94 @@
   transition: background-color 0.3s ease;
 }
 
-/* Expand main content to full width with small margin */
-#main {
-  max-width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 1em !important;
-  padding-right: 1em !important;
+/* EXTREME FULL WIDTH OVERRIDES - !important on everything */
+html {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
 }
 
-/* Remove max-width constraint at all breakpoints */
+body {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/* Force main container to full width */
+#main {
+  max-width: 100vw !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+  float: none !important;
+  box-sizing: border-box !important;
+}
+
+/* Override max-width at all breakpoints */
 @media (min-width: 1280px) {
   #main {
-    max-width: 100% !important;
+    max-width: 100vw !important;
+  }
+  
+  .masthead__inner-wrap {
+    max-width: 100vw !important;
   }
 }
 
-/* Adjust page width to use more space */
-.page {
+/* Force all content containers to full width */
+.page,
+.archive,
+article.page,
+.page__inner-wrap,
+.page__content,
+.initial-content,
+.search-content,
+.wrapper,
+.page__hero--overlay .wrapper,
+.masthead__inner-wrap,
+.wiki-container,
+.wiki-content,
+.page__footer,
+.page__footer-follow,
+.page__footer-copyright {
   width: 100% !important;
+  max-width: 100% !important;
   padding-right: 0 !important;
   float: none !important;
+  box-sizing: border-box !important;
 }
 
-/* Remove sidebar width calculations */
+/* Completely remove sidebar */
+.sidebar,
+.wiki-sidebar {
+  display: none !important;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove all sidebar width calculations at all breakpoints */
 @media (min-width: 1024px) {
-  .page {
+  .page,
+  .archive {
     width: 100% !important;
+    max-width: 100% !important;
     padding-right: 0 !important;
   }
 }
 
-/* Ensure content flows properly */
-.page__inner-wrap {
+/* Force full width for all elements with calc() widths */
+.page,
+.archive {
   width: 100% !important;
-  float: none !important;
+  padding-right: 0 !important;
 }
 
-/* Hide or minimize sidebar */
-.sidebar {
-  display: none !important;
+/* Ensure masthead uses full width */
+.masthead {
+  width: 100% !important;
+  max-width: 100vw !important;
 }
 
 /* Ensure author profile doesn't restrict width */
@@ -87,10 +135,12 @@
   max-width: 110px !important;
 }
 
-/* Override any container width restrictions */
-.initial-content,
-.archive,
-.search-content {
-  width: 100% !important;
-  max-width: 100% !important;
+/* Force wiki content to full width */
+.wiki-content {
+  flex: 0 0 100% !important;
+}
+
+/* Ensure all containers use border-box sizing */
+* {
+  box-sizing: border-box !important;
 }

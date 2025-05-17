@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DO-178C Body of Knowledge - Full Width Demo</title>
+  <style>
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+      line-height: 1.65;
+      color: #333;
+      background-color: #fff;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    
+    /* Header styles */
+    .masthead {
+      position: relative;
+      border-bottom: 1px solid #f2f3f3;
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    .masthead__inner-wrap {
+      width: 100%;
+      max-width: 100%;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .site-title {
+      font-weight: bold;
+      font-size: 1.5em;
+      text-decoration: none;
+      color: #333;
+    }
+    
+    .visible-links {
+      display: flex;
+      list-style: none;
+    }
+    
+    .visible-links li {
+      margin-left: 2em;
+    }
+    
+    .visible-links a {
+      text-decoration: none;
+      color: #333;
+    }
+    
+    /* Main content styles */
+    .initial-content {
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    #main {
+      width: 100%;
+      max-width: 100%;
+      padding: 1em;
+      margin: 0 auto;
+    }
+    
+    .intro-section {
+      margin: 2em 0 2.5em;
+      padding: 1.5em;
+      background-color: #f8f9fa;
+      border-left: 4px solid #6f777d;
+      border-radius: 4px;
+    }
+    
+    .intro-section h2 {
+      margin-top: 0;
+      color: #3d4144;
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    
+    .intro-section p {
+      font-size: 1.05em;
+      line-height: 1.6;
+      margin-bottom: 1em;
+    }
+    
+    .btn {
+      display: inline-block;
+      margin-top: 0.5em;
+      padding: 0.5em 1em;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: white;
+    }
+    
+    .intro-divider {
+      margin: 2em 0;
+      border-top: 1px solid #e9ecef;
+    }
+    
+    /* Footer styles */
+    .page__footer {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 2em;
+      padding: 1em;
+      background-color: #f8f9fa;
+      color: #646769;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <a class="site-title" href="#">DO-178C Body of Knowledge</a>
+      <ul class="visible-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Wiki</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">DO-178C Posts</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="initial-content">
+    <div id="main" role="main">
+      <div class="intro-section">
+        <h2>Welcome to the DO-178C Body of Knowledge</h2>
+        <p>
+          This site is dedicated to building a comprehensive body of knowledge around DO-178C standards for aviation software certification.
+          It's created from my daily work in DO-178C, systems engineering, software engineering, and systems safety.
+        </p>
+        <p>
+          I create posts and wiki pages when I have to explain concepts in my daily work to other engineers, regulators, or certification specialists.
+          This approach ensures the content is practical, relevant, and addresses real-world challenges in aviation software certification.
+        </p>
+        <p>
+          <a href="#" class="btn">Learn more about this site</a>
+        </p>
+      </div>
+      
+      <hr class="intro-divider">
+      
+      <h3>Recent Posts</h3>
+      
+      <div class="entries-list">
+        <article class="entry">
+          <h2>Mastering MC/DC Coverage</h2>
+          <p>Understanding Modified Condition/Decision Coverage and its importance in DO-178C Level A software verification.</p>
+        </article>
+        
+        <article class="entry">
+          <h2>Understanding Development Assurance</h2>
+          <p>A comprehensive guide to development assurance levels and their impact on aviation software certification.</p>
+        </article>
+        
+        <article class="entry">
+          <h2>How DALs are Determined and Allocated</h2>
+          <p>Learn about the process of determining and allocating Development Assurance Levels in aviation software.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+  
+  <div class="page__footer">
+    <footer>
+      <p>© 2025 DO-178C Body of Knowledge</p>
+    </footer>
+  </div>
+</body>
+</html>

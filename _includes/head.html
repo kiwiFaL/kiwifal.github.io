@@ -22,6 +22,33 @@
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
+<!-- Inline styles for full width layout -->
+<style>
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+  #main {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+  }
+  .page, .archive, article.page, .page__inner-wrap, .page__content,
+  .initial-content, .search-content, .masthead__inner-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 0 !important;
+    float: none !important;
+  }
+  .sidebar {
+    display: none !important;
+  }
+</style>
+
 {% if site.head_scripts %}
   {% for script in site.head_scripts %}
     <script src="{{ script | relative_url }}"></script>

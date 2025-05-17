@@ -69,24 +69,24 @@
       width: 100%;
       max-width: 1280px;
       margin: 0 auto;
+      padding: 1em;
+      background-color: #fff;
     }
     
-    #main {
+    /* Horizontal layout for author info */
+    .author-info {
       display: flex;
+      align-items: center;
+      margin-bottom: 2em;
       padding: 1em;
-    }
-    
-    /* Sidebar styles */
-    .sidebar {
-      width: 250px;
-      padding: 1em;
-      margin-right: 2em;
+      background-color: #f9f9f9;
+      border-radius: 4px;
     }
     
     .author__avatar {
       width: 110px;
       height: 110px;
-      margin: 0 auto 1em;
+      margin-right: 2em;
     }
     
     .author__avatar img {
@@ -96,32 +96,34 @@
       object-fit: cover;
     }
     
+    .author__details {
+      flex: 1;
+    }
+    
     .author__name {
       margin: 0;
       font-size: 1.2em;
-      text-align: center;
     }
     
     .author__bio {
       margin: 0.5em 0;
       font-size: 0.9em;
-      text-align: center;
     }
     
     .author__location {
       margin: 0.5em 0;
       font-size: 0.9em;
-      text-align: center;
       color: #666;
     }
     
     .author__links {
       list-style: none;
       margin-top: 1em;
+      display: flex;
     }
     
     .author__links li {
-      margin-bottom: 0.5em;
+      margin-right: 1em;
     }
     
     .author__links a {
@@ -132,9 +134,8 @@
     }
     
     /* Main content area */
-    .archive {
-      flex: 1;
-      max-width: calc(100% - 300px);
+    .main-content {
+      background-color: #fff;
     }
     
     .intro-section {
@@ -200,12 +201,12 @@
   </div>
 
   <div class="initial-content">
-    <div id="main" role="main">
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <div class="author__avatar">
-          <img src="assets/images/bio-photo.jpg" alt="Paul Wright">
-        </div>
+    <!-- Author info in horizontal layout -->
+    <div class="author-info">
+      <div class="author__avatar">
+        <img src="assets/images/bio-photo.jpg" alt="Paul Wright">
+      </div>
+      <div class="author__details">
         <h3 class="author__name">Paul Wright</h3>
         <p class="author__bio">CEng, MSc, GradDipTech, BBS, DAEM, MEIT</p>
         <p class="author__location">Kerikeri, New Zealand</p>
@@ -215,44 +216,44 @@
           <li><a href="#">Email</a></li>
         </ul>
       </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="intro-section">
+        <h2>Welcome to the DO-178C Body of Knowledge</h2>
+        <p>
+          This site is dedicated to building a comprehensive body of knowledge around DO-178C standards for aviation software certification.
+          It's created from my daily work in DO-178C, systems engineering, software engineering, and systems safety.
+        </p>
+        <p>
+          I create posts and wiki pages when I have to explain concepts in my daily work to other engineers, regulators, or certification specialists.
+          This approach ensures the content is practical, relevant, and addresses real-world challenges in aviation software certification.
+        </p>
+        <p>
+          <a href="#" class="btn">Learn more about this site</a>
+        </p>
+      </div>
       
-      <!-- Main Content -->
-      <div class="archive">
-        <div class="intro-section">
-          <h2>Welcome to the DO-178C Body of Knowledge</h2>
-          <p>
-            This site is dedicated to building a comprehensive body of knowledge around DO-178C standards for aviation software certification.
-            It's created from my daily work in DO-178C, systems engineering, software engineering, and systems safety.
-          </p>
-          <p>
-            I create posts and wiki pages when I have to explain concepts in my daily work to other engineers, regulators, or certification specialists.
-            This approach ensures the content is practical, relevant, and addresses real-world challenges in aviation software certification.
-          </p>
-          <p>
-            <a href="#" class="btn">Learn more about this site</a>
-          </p>
-        </div>
+      <hr class="intro-divider">
+      
+      <h3>Recent Posts</h3>
+      
+      <div class="entries-list">
+        <article class="entry">
+          <h2>Mastering MC/DC Coverage</h2>
+          <p>Understanding Modified Condition/Decision Coverage and its importance in DO-178C Level A software verification.</p>
+        </article>
         
-        <hr class="intro-divider">
+        <article class="entry">
+          <h2>Understanding Development Assurance</h2>
+          <p>A comprehensive guide to development assurance levels and their impact on aviation software certification.</p>
+        </article>
         
-        <h3>Recent Posts</h3>
-        
-        <div class="entries-list">
-          <article class="entry">
-            <h2>Mastering MC/DC Coverage</h2>
-            <p>Understanding Modified Condition/Decision Coverage and its importance in DO-178C Level A software verification.</p>
-          </article>
-          
-          <article class="entry">
-            <h2>Understanding Development Assurance</h2>
-            <p>A comprehensive guide to development assurance levels and their impact on aviation software certification.</p>
-          </article>
-          
-          <article class="entry">
-            <h2>How DALs are Determined and Allocated</h2>
-            <p>Learn about the process of determining and allocating Development Assurance Levels in aviation software.</p>
-          </article>
-        </div>
+        <article class="entry">
+          <h2>How DALs are Determined and Allocated</h2>
+          <p>Learn about the process of determining and allocating Development Assurance Levels in aviation software.</p>
+        </article>
       </div>
     </div>
   </div>

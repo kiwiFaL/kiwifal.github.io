@@ -39,3 +39,41 @@
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
+
+/* Ensure sidebar is visible */
+.sidebar {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Ensure author profile doesn't restrict width */
+.author__avatar {
+  max-width: 110px !important;
+}
+
+/* Wiki layout adjustments */
+.wiki-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+.wiki-sidebar {
+  display: block !important;
+  flex: 0 0 250px !important;
+  margin-right: 2rem !important;
+}
+
+.wiki-content {
+  flex: 1 !important;
+}
+
+@media (max-width: 64em) {
+  .wiki-sidebar {
+    flex: 0 0 100% !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .wiki-content {
+    flex: 0 0 100% !important;
+  }
+}

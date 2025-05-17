@@ -4,3 +4,38 @@
 .author__avatar img {
   border-radius: 4px !important; /* Small rounded corners instead of circle */
 }
+
+/* Introduction section styling */
+.intro-section {
+  margin: 2em 0 2.5em;
+  padding: 1.5em;
+  background-color: #f8f9fa;
+  border-left: 4px solid #6f777d;
+  border-radius: 4px;
+}
+
+.intro-section h2 {
+  margin-top: 0;
+  color: #3d4144;
+  font-size: 1.5em;
+}
+
+.intro-section p {
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+.intro-divider {
+  margin: 2em 0;
+  border-top: 1px solid #e9ecef;
+}
+
+.btn.btn--primary {
+  display: inline-block;
+  margin-top: 0.5em;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}

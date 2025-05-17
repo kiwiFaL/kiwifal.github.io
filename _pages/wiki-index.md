@@ -29,10 +29,10 @@ Welcome to the DO-178C Wiki, a comprehensive resource for understanding and impl
 
 ## Recent Updates
 
+* **May 18, 2025** - Added new blog post on Derived Requirements in DO-178C
 * **May 15, 2025** - Added Development Assurance Overview article
 * **May 14, 2025** - Added detailed MC/DC Coverage article
 * **May 10, 2025** - Updated Tool Qualification guidelines
-* **May 5, 2025** - Added new section on Requirements Traceability
 
 ## About This Wiki
 

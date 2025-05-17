@@ -33,6 +33,8 @@ main:
         
   - title: "Related Blog Posts"
     children:
+      - title: "Derived Requirements in DO-178C"
+        url: /do-178c/derived-requirements-in-do-178c/
       - title: "Mastering MC/DC Coverage"
         url: /do-178c/mastering-mc-dc-coverage/
       - title: "Understanding Development Assurance"

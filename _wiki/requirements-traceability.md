@@ -215,6 +215,8 @@ Using models as the central artifact with embedded traceability:
 - Formal review process for derived requirements
 - Safety analysis for derived requirements
 
+For a detailed exploration of derived requirements, see [Derived Requirements in DO-178C: When and How to Use Them](/do-178c/derived-requirements-in-do-178c/)
+
 ### Unintended Functions
 
 - **Detection**: Identifying code not traced to requirements

@@ -1,6 +1,6 @@
 ---
 title: "Peer Reviews in DO-178C: Practical Implementation and Common Misconceptions"
-date: 2025-05-19
+date: 2025-05-18
 categories:
   - DO-178C
   - Verification

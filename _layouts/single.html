@@ -19,12 +19,9 @@ layout: default
 {% endif %}
 
 <div id="main" role="main" style="max-width: 100%; width: 100%; padding-left: 1em; padding-right: 1em;">
-  {% comment %}
-  <!-- Sidebar removed for full width layout -->
   {% include sidebar.html %}
-  {% endcomment %}
 
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %} style="width: 100%; max-width: 100%; padding-right: 0; float: none;">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %} style="width: calc(100% - 300px); max-width: 100%; float: right;">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}

@@ -10,6 +10,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      border: none !important; /* Force no borders on all elements */
     }
     
     body {
@@ -22,7 +23,7 @@
     /* Header styles */
     .masthead {
       position: relative;
-      border-bottom: 1px solid #f2f3f3;
+      border-bottom: 1px solid #f2f3f3 !important; /* Allow only this border */
       width: 100%;
     }
     
@@ -73,10 +74,10 @@
       background-color: #fff;
     }
     
-    /* Horizontal layout for author info */
-    .author-info {
+    /* Author info section */
+    .author-section {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: 2em;
       padding: 1em;
       background-color: #f9f9f9;
@@ -96,7 +97,7 @@
       object-fit: cover;
     }
     
-    .author__details {
+    .author__info {
       flex: 1;
     }
     
@@ -119,30 +120,27 @@
     .author__links {
       list-style: none;
       margin-top: 1em;
-      display: flex;
     }
     
     .author__links li {
-      margin-right: 1em;
+      margin-bottom: 0.5em;
     }
     
     .author__links a {
       text-decoration: none;
       color: #333;
-      display: flex;
-      align-items: center;
     }
     
     /* Main content area */
     .main-content {
       background-color: #fff;
+      padding: 1em;
     }
     
     .intro-section {
       margin: 2em 0 2.5em;
       padding: 1.5em;
       background-color: #f8f9fa;
-      border-left: 4px solid #6f777d;
       border-radius: 4px;
     }
     
@@ -172,7 +170,7 @@
     
     .intro-divider {
       margin: 2em 0;
-      border-top: 1px solid #e9ecef;
+      border-top: 1px solid #e9ecef !important; /* Allow only this border */
     }
     
     /* Footer styles */
@@ -201,12 +199,12 @@
   </div>
 
   <div class="initial-content">
-    <!-- Author info in horizontal layout -->
-    <div class="author-info">
+    <!-- Author info section -->
+    <div class="author-section">
       <div class="author__avatar">
         <img src="assets/images/bio-photo.jpg" alt="Paul Wright">
       </div>
-      <div class="author__details">
+      <div class="author__info">
         <h3 class="author__name">Paul Wright</h3>
         <p class="author__bio">CEng, MSc, GradDipTech, BBS, DAEM, MEIT</p>
         <p class="author__location">Kerikeri, New Zealand</p>

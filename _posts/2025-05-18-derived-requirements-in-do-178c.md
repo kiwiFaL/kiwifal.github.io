@@ -19,7 +19,7 @@ header:
 
 In the world of avionics software development under DO-178C and other development assurance standards, requirements traceability is a cornerstone of the certification process. One particular aspect which often causes confusion is the concept of "derived requirements." This post explores what derived requirements are, when they should be used, and common misconceptions surrounding them.
 
-Now Derived is a terrible term, they should be called orphan or parent-less requirements. The term derived means "comes from" so RTCA for some reason used the complete opposite term but now industry is stuck with it. Just one of the many confusing things in the DO-178C space. Moving on....
+It's worth noting that "derived" is somewhat of a misnomer. These requirements might be better described as "orphan" or "parent-less" requirements. The term "derived" suggests they come from something, yet in DO-178C context, they specifically don't derive from higher-level requirements. This terminology can be confusing for newcomers to the DO-178C space.
 
 ## What Are Derived Requirements?
 
@@ -64,7 +64,7 @@ Some example requirements which may be derived:
 
 ## You have some Derived Requirements - now what?
 
-Derived requirements introduce functionality in the software and the overall system which the Systems Engineering team and more importantly the Safety Engineering Team. Complex systems are fundamentally based on Functional Safety and adding functions which haven't been assessed by the Safety Engineering team for its failure impact on the Aircraft, Crew or Passengers it could introduce a hazard which requires further mitigation.
+Derived requirements introduce functionality in the software and the overall system which wasn't anticipated by the Systems Engineering team and, more importantly, the Safety Engineering Team. Complex systems are fundamentally based on Functional Safety, and adding functions which haven't been assessed by the Safety Engineering team for their failure impact on the Aircraft, Crew, or Passengers could introduce hazards which require further mitigation.
 
 So all Derived Requirements must be passed back to Systems and Safety Engineering for assessment and ultimately acceptance. This is the only role Systems and Safety have in the DO-178C process (see DO-178C objectives A2.2 and A2.5) although not technically inside the DO-178C process as these are passed out of DO-178C process.
 
@@ -74,7 +74,7 @@ Systems Engineering may create a parent system requirement so it is no longer "d
 
 There can be a habit of misclassifying requirements as "derived" to be on the safe side. But this has several negative consequences:
 
-1. **Red flag to the regulator**: Derived requirements are a red flag to the regulator the system level requirements are poor, software requirements are poor or both. Anything over a small % should raise questions from an informed regulator. ALthough having none could be suspicious as well.
+1. **Red flag to the regulator**: Derived requirements are a red flag to the regulator that the system level requirements are poor, software requirements are poor, or both. Anything over a small percentage should raise questions from an informed regulator. Although having none could be suspicious as well.
 2. **Increased certification burden**: Derived requirements require additional safety analysis and justification
 3. **Obscured traceability**: It becomes harder to verify all system requirements are properly implemented
 4. **Potential safety gaps**: Important system-level considerations might be missed if requirements are incorrectly handled as implementation details
@@ -84,7 +84,7 @@ There can be a habit of misclassifying requirements as "derived" to be on the sa
 To avoid these issues, consider these best practices:
 
 ### 1. Consultative Design Process
-Before systems requirements are locked down and allocated to Hardware or Software items the Systems team should thoroughly consult with the Hardware and Software teams doing the actual implementation. This minimises derived requirements and gets the systems requirements closer to a set of functionality which can actually be implemented.
+Before systems requirements are locked down and allocated to Hardware or Software items, the Systems team should thoroughly consult with the Hardware and Software teams doing the actual implementation. This minimizes derived requirements and gets the systems requirements closer to a set of functionality which can actually be implemented.
 
 ### 2. Thorough System Requirements Analysis
 Before classifying a requirement as "derived," thoroughly review system requirements to ensure there isn't a higher-level requirement it could trace to.

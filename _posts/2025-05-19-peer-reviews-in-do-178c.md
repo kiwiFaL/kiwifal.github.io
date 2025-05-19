@@ -1,6 +1,6 @@
 ---
 title: "Peer Reviews in DO-178C: Practical Implementation and Common Misconceptions"
-date: 2025-05-18
+date: 2025-05-19
 categories:
   - DO-178C
   - Verification
@@ -21,13 +21,9 @@ In the world of avionics software development under DO-178C, verification activi
 
 ## What Are Peer Reviews in DO-178C?
 
-DO-178C calls what we call "validation" in the systems engineering space "verification". All analysis, reviews and testing is verification, there is no "validation" in DO-178C at least this term is not used, bu the activity is. This is a verification process called "peer-review". What they are is explicit in the name - a Peer (a software engineer) reviews (checks) if an item (requirement, model, code, test case, test result, etc) or group of items are correct per the required plans and standrds. Depending on the DAL this peer must be independent from the software engineer who developed it. 
+DO-178C calls what we call "validation" in the systems engineering space "verification". All analysis, reviews, and testing is verification. There is no "validation" in DO-178C; at least this term is not used, but the activity is. This is a verification process called "peer-review". What they are is explicit in the name - a Peer (a software engineer) reviews (checks) if an item (requirement, model, code, test case, test result, etc.) or group of items are correct per the required plans and standards. Depending on the DAL, this peer must be independent from the software engineer who developed it.
 
-
-
-
-
-So, to verify HLRs implement all and only the functionality in the system requirements, or LLRs implement functionality in the HLRs, or Code to the LLRs, a peer is reviewing these items. This is a software engineer reviewing the item against the higher level items and the applicable plans and standards for the item under review. It is not: 
+To verify HLRs implement all and only the functionality in the system requirements, or LLRs implement functionality in the HLRs, or Code to the LLRs, a peer is reviewing these items. This is a software engineer reviewing the item against the higher level items and the applicable plans and standards for the item under review. It is not:
 
 1. A safety review. There is no requirement for Safety to be involved.
 2. A systems engineering review. There is no requirement for Systems to be involved.
@@ -45,9 +41,9 @@ These reviews apply to various software artifacts including High-Level Requireme
 
 ## The Minimum Peer Review Requirement: Just One Peer
 
-Im going to repeat this again as I see it as one the big overheads in doing DO-178C, the missconception DO-178C peer reviews require a large, cross-functional team. In reality, the standard only requires a minimum of one peer reviewer. This peer must be:
+I'm going to repeat this again as I see it as one of the big overheads in doing DO-178C, the misconception that DO-178C peer reviews require a large, cross-functional team. In reality, the standard only requires a minimum of one peer reviewer. This peer must be:
 
-1. Another software engineer (May require independance, but independance is recommended)
+1. Another software engineer (May require independence, but independence is recommended)
 2. Knowledgeable in the domain under review
 3. Qualified to perform the review
 

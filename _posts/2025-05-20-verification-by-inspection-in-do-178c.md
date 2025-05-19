@@ -19,7 +19,7 @@ header:
 
 # Verification by Inspection in DO-178C: When to Use It (Rarely)
 
-If you see "inspection" as the verification method for a requirment, you should be immediatley suspicious. 
+If you see "inspection" as the verification method for a requirement, you should be immediately suspicious.
 
 ## What is Verification by Inspection?
 
@@ -29,13 +29,13 @@ DO-178C section 6.2b specifically mentions inspection as one of the [verificatio
 
 ## Why Inspection Should Be Rare
 
-DO-178C section 6.2b makes it clear - inspection should be used sparingly and only when absolutley nessary and fully justified as you cant achieve the [test coverage objectives](/wiki/structural-coverage/). Here's why:
+DO-178C section 6.2b makes it clear - inspection should be used sparingly and only when absolutely necessary and fully justified as you can't achieve the [test coverage objectives](/wiki/structural-coverage/). Here's why:
 
 1. **Inspection is subjective** - It relies heavily on the inspector's knowledge and judgment
 2. **Inspection lacks objectivity** - There's no pass/fail criteria that can be independently verified
 3. **Inspection provides weaker evidence** - It doesn't demonstrate actual functionality
 4. **Inspection is less repeatable** - Different inspectors might reach different conclusions
-5. **You cant inspect the binary** - while you can inspect the requirments, models and code, none of these actually go flying. Plus there are many functioanal aspects you wont be able to inspect. If you were to inspect a function in the code, you cant really see the other items contributing to this function (think operating system, board support package, hardware and AEH providing IO, processor)
+5. **You can't inspect the binary** - while you can inspect the requirements, models and code, none of these actually go flying. Plus there are many functional aspects you won't be able to inspect. If you were to inspect a function in the code, you can't really see the other items contributing to this function (think operating system, board support package, hardware and AEH providing IO, processor)
 
 
 ## When Is Inspection Actually Appropriate?
@@ -78,7 +78,7 @@ When deciding on verification methods, follow this simple hierarchy:
 3. **[Review](/wiki/verification-methods/#1-reviews)** - Appropriate for checking conformance to standards and completeness
 4. **Inspection** - Last resort, only when the above methods cannot be applied
 
-Remember: Test is Best. If you can test it, you should test it. If you cant test rewrite the requirement so you can. Almost all SW requirements should be verifiable by a software test. For Level A software, this includes achieving [MC/DC coverage](/wiki/mc-dc-coverage/).
+Remember: Test is Best. If you can test it, you should test it. If you can't test it, rewrite the requirement so you can. Almost all SW requirements should be verifiable by a software test. For Level A software, this includes achieving [MC/DC coverage](/wiki/mc-dc-coverage/).
 
 ## Conclusion
 

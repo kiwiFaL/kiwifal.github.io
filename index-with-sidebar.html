@@ -70,24 +70,25 @@
       width: 100%;
       max-width: 1280px;
       margin: 0 auto;
-      padding: 1em;
       background-color: #fff;
     }
     
-    /* Author info section */
-    .author-section {
+    #main {
       display: flex;
-      align-items: flex-start;
-      margin-bottom: 2em;
       padding: 1em;
-      background-color: #f9f9f9;
-      border-radius: 4px;
+    }
+    
+    /* Sidebar styles */
+    .sidebar {
+      width: 250px;
+      padding: 1em;
+      margin-right: 2em;
     }
     
     .author__avatar {
       width: 110px;
       height: 110px;
-      margin-right: 2em;
+      margin: 0 auto 1em;
     }
     
     .author__avatar img {
@@ -97,23 +98,22 @@
       object-fit: cover;
     }
     
-    .author__info {
-      flex: 1;
-    }
-    
     .author__name {
       margin: 0;
       font-size: 1.2em;
+      text-align: center;
     }
     
     .author__bio {
       margin: 0.5em 0;
       font-size: 0.9em;
+      text-align: center;
     }
     
     .author__location {
       margin: 0.5em 0;
       font-size: 0.9em;
+      text-align: center;
       color: #666;
     }
     
@@ -129,12 +129,14 @@
     .author__links a {
       text-decoration: none;
       color: #333;
+      display: flex;
+      align-items: center;
     }
     
     /* Main content area */
-    .main-content {
-      background-color: #fff;
-      padding: 1em;
+    .archive {
+      flex: 1;
+      max-width: calc(100% - 300px);
     }
     
     .intro-section {
@@ -199,12 +201,12 @@
   </div>
 
   <div class="initial-content">
-    <!-- Author info section -->
-    <div class="author-section">
-      <div class="author__avatar">
-        <img src="assets/images/bio-photo.jpg" alt="Paul Wright">
-      </div>
-      <div class="author__info">
+    <div id="main" role="main">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="author__avatar">
+          <img src="assets/images/bio-photo.jpg" alt="Paul Wright">
+        </div>
         <h3 class="author__name">Paul Wright</h3>
         <p class="author__bio">CEng, MSc, GradDipTech, BBS, DAEM, MEIT</p>
         <p class="author__location">Kerikeri, New Zealand</p>
@@ -214,10 +216,9 @@
           <li><a href="#">Email</a></li>
         </ul>
       </div>
-    </div>
-    
-    <!-- Main Content -->
-    <div class="main-content">
+      
+      <!-- Main Content -->
+      <div class="archive">
       <div class="intro-section">
         <h2>Welcome to the DO-178C Body of Knowledge</h2>
         <p>
@@ -252,6 +253,7 @@
           <h2>How DALs are Determined and Allocated</h2>
           <p>Learn about the process of determining and allocating Development Assurance Levels in aviation software.</p>
         </article>
+      </div>
       </div>
     </div>
   </div>

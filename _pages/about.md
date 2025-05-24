@@ -9,9 +9,9 @@ author_profile: true
 
 This site provides comprehensive resources, guides, and best practices for aviation software certification under DO-178C standards.
 
-## Our Mission
+## My Mission
 
-Our mission is to simplify the understanding and implementation of DO-178C requirements for aviation software developers, verification engineers, and certification specialists.
+My mission is to simplify the understanding and implementation of DO-178C and related material for aviation software developers, verification engineers, and certification specialists. Too much confusion floats around and this creates inefficiencies or less "safe" software. The key thing to understand is DO-178 is about intended function, which feeds into safety but does not in itself make software safer. Please start with the intended function page as an intro
 
 ## Content
 

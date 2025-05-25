@@ -25,6 +25,7 @@ There is so much confusion about DO-178C. The complete misrepresentation of it i
 - DO-178C is about software maintenance - nope!
 - DO-178C makes sure we exhaustively test the software - nope!
 - DO-178C is for software safety - nope!
+- DO-178C is for software reliability - nope!
 
 DO-178C is about intended function; assuring the binary performs its intended function (requirements) to an acceptable Level (DAL). 
 

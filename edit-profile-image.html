@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            max-width: 300px;
+            max-height: 300px;
+        }
+        img {
+            max-width: 300px;
+            max-height: 300px;
+            border: 1px solid #ccc;
+        }
+        .controls {
+            margin: 20px 0;
+        }
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+        button, .file-upload {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        button:hover, .file-upload:hover {
+            background-color: #45a049;
+        }
+        .instructions {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .file-input {
+            display: none;
+        }
+        .upload-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Profile Image</h1>
+    
+    <div class="instructions">
+        <h2>Instructions</h2>
+        <ol>
+            <li>Click "Upload Image" and select your profile image (bio-photo.jpg)</li>
+            <li>Adjust the brightness slider to make the image brighter</li>
+            <li>Click "Process Image" to apply the changes</li>
+            <li>Click "Download Image" to save the processed image</li>
+            <li>Save the image as "bio-photo.jpg" in the assets/images folder to replace the original</li>
+        </ol>
+    </div>
+    
+    <div class="upload-container">
+        <label for="imageUpload" class="file-upload">Upload Image</label>
+        <input type="file" id="imageUpload" class="file-input" accept="image/*">
+    </div>
+    
+    <div class="controls">
+        <div>
+            <label for="brightness">Brightness:</label>
+            <input type="range" id="brightness" min="0" max="100" value="20" step="5">
+            <span id="brightnessValue">20%</span>
+        </div>
+    </div>
+    
+    <button id="processBtn">Process Image</button>
+    <button id="downloadBtn" disabled>Download Image</button>
+    
+    <div class="container">
+        <div class="image-container">
+            <h3>Original Image</h3>
+            <img id="originalImage" alt="Original Profile Image" style="display: none;">
+            <div id="uploadPrompt">Please upload an image</div>
+        </div>
+        
+        <div class="image-container">
+            <h3>Processed Image (Square & Brighter)</h3>
+            <canvas id="outputCanvas" width="300" height="300"></canvas>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageUpload = document.getElementById('imageUpload');
+            const originalImage = document.getElementById('originalImage');
+            const uploadPrompt = document.getElementById('uploadPrompt');
+            const outputCanvas = document.getElementById('outputCanvas');
+            const ctx = outputCanvas.getContext('2d');
+            const brightnessSlider = document.getElementById('brightness');
+            const brightnessValue = document.getElementById('brightnessValue');
+            const processBtn = document.getElementById('processBtn');
+            const downloadBtn = document.getElementById('downloadBtn');
+            
+            // Clear canvas initially
+            ctx.fillStyle = '#f8f9fa';
+            ctx.fillRect(0, 0, outputCanvas.width, outputCanvas.height);
+            ctx.fillStyle = '#666';
+            ctx.font = '16px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Processed image will appear here', outputCanvas.width/2, outputCanvas.height/2);
+            
+            // Handle file upload
+            imageUpload.addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        originalImage.src = event.target.result;
+                        originalImage.style.display = 'block';
+                        uploadPrompt.style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+            
+            // Update brightness value display
+            brightnessSlider.addEventListener('input', function() {
+                brightnessValue.textContent = this.value + '%';
+            });
+            
+            // Process image when button is clicked
+            processBtn.addEventListener('click', function() {
+                if (originalImage.src) {
+                    processImage();
+                    downloadBtn.disabled = false;
+                } else {
+                    alert('Please upload an image first');
+                }
+            });
+            
+            // Download button
+            downloadBtn.addEventListener('click', function() {
+                const link = document.createElement('a');
+                link.download = 'bio-photo.jpg';
+                link.href = outputCanvas.toDataURL('image/jpeg', 0.9);
+                link.click();
+            });
+            
+            // Process the image
+            function processImage() {
+                // Wait for the image to load
+                if (!originalImage.complete) {
+                    originalImage.onload = processImage;
+                    return;
+                }
+                
+                // Get the brightness value
+                const brightnessAdjustment = parseInt(brightnessSlider.value) / 100;
+                
+                // Calculate the square dimensions
+                const size = Math.min(300, 300);
+                outputCanvas.width = size;
+                outputCanvas.height = size;
+                
+                // Clear the canvas
+                ctx.clearRect(0, 0, size, size);
+                
+                // Draw the image as a square (cropping to center)
+                const sourceSize = Math.min(originalImage.naturalWidth, originalImage.naturalHeight);
+                const sourceX = (originalImage.naturalWidth - sourceSize) / 2;
+                const sourceY = (originalImage.naturalHeight - sourceSize) / 2;
+                
+                ctx.drawImage(
+                    originalImage,
+                    sourceX, sourceY, sourceSize, sourceSize,
+                    0, 0, size, size
+                );
+                
+                // Apply brightness adjustment
+                if (brightnessAdjustment > 0) {
+                    const imageData = ctx.getImageData(0, 0, size, size);
+                    const data = imageData.data;
+                    
+                    for (let i = 0; i < data.length; i += 4) {
+                        // Adjust RGB values
+                        data[i] = Math.min(255, data[i] + (255 - data[i]) * brightnessAdjustment);     // Red
+                        data[i + 1] = Math.min(255, data[i + 1] + (255 - data[i + 1]) * brightnessAdjustment); // Green
+                        data[i + 2] = Math.min(255, data[i + 2] + (255 - data[i + 2]) * brightnessAdjustment); // Blue
+                    }
+                    
+                    ctx.putImageData(imageData, 0, 0);
+                }
+            }
+            
+            // Handle image loading errors
+            originalImage.onerror = function() {
+                alert('Error loading the image. Please try again.');
+                console.error('Error loading the original image');
+            };
+        });
+    </script>
+</body>
+</html>

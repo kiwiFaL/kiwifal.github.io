@@ -1,0 +1,9 @@
+{
+  "name": "image-processor",
+  "version": "1.0.0",
+  "description": "Process profile image to make it square and brighter",
+  "main": "process-image.js",
+  "dependencies": {
+    "canvas": "^2.11.0"
+  }
+}

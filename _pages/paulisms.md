@@ -19,13 +19,21 @@ These are my catch phrases and pithy sayings that I use regularly, half humour h
 
 - **"I'm Here to Lead Not Read"** - Lazy leadership, said in a mocking way. Too many leaders listen and hear what they want to hear instead of reading the data. 
 
-- **"Perfect is Enemy of Good"** - Perfect never leaves your desk, get it as close to good as possible and then get in front of someone else to use or review. 
+- **"Perfect is the Enemy of Good"** - Perfect never leaves your desk, get it as close to good as possible and then get in front of someone else to use or review. 
 
 - **"I Can't Explain Quality, but I'll Know It When I See It"** - Sometimes you just have to make something for people to know its wrong and then they will tell you what needs to change to make it right. You need a starting point and then iterate from there. 
 
-- **"Software is an Amazing Technology, Just Don't Use It for Anything Important"** - A tongue-in-cheek commentary on the inherent challenges and limitations of software in critical systems. 
+- **"Software is an Amazing Technology, Just Don't Use It for Anything Important"** - A tongue-in-cheek commentary on the inherent challenges and limitations of software in critical systems.
 
 - **"It's not about the principle, it's about the money."** - Flip on the original saying, as this is what most people actually think.
+
+- **"Loosey-goosey"** - Describing bad practices in aviation that lack proper rigor and discipline.
+
+- **"Fast and loose"** - Characterizing a "git-r-done" attitude which can be good or bad depending on the consequences and context.
+
+- **"Sunlight is the best disinfectant"** - Emphasizing the importance of transparency and examining the data to reveal and address issues.
+
+- **"A camel is a horse designed by committee"** - I guess it is horse-like but it's not really what you were after. Highlights how group design processes can lead to compromised outcomes that satisfy no one completely.
 
 ## Context
 

@@ -35,6 +35,10 @@ These are my catch phrases and pithy sayings that I use regularly, half humour h
 
 - **"A camel is a horse designed by committee"** - I guess it is horse-like but it's not really what you were after. Highlights how group design processes can lead to compromised outcomes that satisfy no one completely.
 
+- **"Complexity is just too many simple systems integrated together"** - One if statement is simple, 10 are probably simple but 1000 are not. At some point we have added too many simple things together and created a complex system.
+
+- **"Less is more"** - Removing requirements or things is a really good engineering process to simplify and harden systems. 20-50% of your system, process or organisation is useless; the challenge is finding out which 20-50% it is. Iterative reduction is a great improvement mechanism.
+
 ## Context
 
 These sayings often come up in discussions about software development processes, certification activities, and team collaboration. They represent years of experience working with aviation software and certification standards.

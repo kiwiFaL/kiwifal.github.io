@@ -5,8 +5,6 @@ layout: single
 author_profile: true
 ---
 
-# Paulisms
-
 These are my catch phrases and pithy sayings that I use regularly, half humour half with shallow useful meaning. They encapsulate my philosophy and approach to software development, engineering and general life.
 
 ## The Collection
@@ -27,10 +25,10 @@ These are my catch phrases and pithy sayings that I use regularly, half humour h
 
 - **"Software is an Amazing Technology, Just Don't Use It for Anything Important"** - A tongue-in-cheek commentary on the inherent challenges and limitations of software in critical systems. 
 
-- **"It's not about the prinicpal, it's about the money."** - Flip on the orginal saying, as this is what most poeple actually think. 
+- **"It's not about the principle, it's about the money."** - Flip on the original saying, as this is what most people actually think.
 
 ## Context
 
 These sayings often come up in discussions about software development processes, certification activities, and team collaboration. They represent years of experience working with aviation software and certification standards.
 
-Feel free to adopt these Paulisms in your own work if they resonate with you! Be carefull some can cut deep. 
+Feel free to adopt these Paulisms in your own work if they resonate with you! Be careful some can cut deep.

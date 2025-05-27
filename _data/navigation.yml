@@ -8,5 +8,7 @@ main:
     url: /posts/
   - title: "Resources"
     url: /resources/
+  - title: "Paulisms"
+    url: /paulisms/
   - title: "About"
     url: /about/

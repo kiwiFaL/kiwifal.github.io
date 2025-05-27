@@ -20,6 +20,7 @@ The site includes:
 - **Wiki**: A comprehensive knowledge base covering all aspects of DO-178C
 - **Blog**: Regular articles on best practices, case studies, and industry updates. These posts are really a collection of my work days explaining DO-178 and related aspects to others. I have used this website as a way to collect these discussions and make them available for other engineers.
 - **Resources**: Templates, checklists, and tools to assist with certification activities
+- **[Paulisms](/paulisms/)**: A collection of my catch phrases and pithy sayings that I use regularly
 
 ## About the Author
 

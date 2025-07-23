@@ -13,6 +13,7 @@ Welcome to the DO-178C Wiki, a comprehensive resource for understanding and impl
 
 ### Certification Basics
 * [Development Assurance Overview](/wiki/Development-assurance-overview/) - Comprehensive guide to development assurance
+* [Aerospace Certification Definitions](/wiki/definitions/) - Key terminology for aerospace certification
 * [Software Levels](/wiki/software-levels/) - Understanding DAL A through E
 * [Verification Methods](/wiki/verification-methods/) - Techniques for software verification
 * [Structural Coverage](/wiki/structural-coverage/) - Code coverage requirements
@@ -29,6 +30,7 @@ Welcome to the DO-178C Wiki, a comprehensive resource for understanding and impl
 
 ## Recent Updates
 
+* **July 23, 2025** - Added Aerospace Certification Definitions page
 * **May 18, 2025** - Added new blog post on Derived Requirements in DO-178C
 * **May 15, 2025** - Added Development Assurance Overview article
 * **May 14, 2025** - Added detailed MC/DC Coverage article
